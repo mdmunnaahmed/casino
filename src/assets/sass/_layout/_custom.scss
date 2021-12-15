@@ -1,0 +1,163 @@
+
+.table {
+    margin: 0;
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+        tr {
+            background: rgba($base-color,1);
+            th {
+                padding: 10px 15px;
+                font-family: $heading;
+                color: $white;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+                border: 1px solid $border-color;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background: $section-bg;
+            }
+            td {
+                color: $body-color;
+                vertical-align: middle;
+                padding: 10px 15px;
+                border-width: 1px;
+                @include breakpoint(lg) {
+                    border-color: $border-color;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        font-family: $heading;
+                        font-size: 15px;
+                        color: $title-color;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.custom--card {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    background: $white;
+}
+
+.custom--card .card-header {
+    color: $dark;
+    background: $primary-color;
+    text-align: center;
+    margin-left: -1px;
+    margin-right: -1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .card-title {
+        color: $white;
+        margin: 0;
+    }
+}
+
+.custom--card .card-body {
+    border-radius: 5px;
+    &.radius-0 {
+        border-radius: 0;
+    }
+}
+
+.custom--card .card-footer {
+    border-color: #e5e5e5;
+}
+
+.badge {
+    background: $base-color;
+    padding: 5px 12px !important;
+    color: $white !important;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    &:hover {
+        color: $white;
+    }
+    &.badge--sm {
+        padding: 3px 10px !important;
+        font-size: 12px;
+    }
+    &.badge--xs {
+        padding: 2px 8px !important;
+        font-size: 11px;
+    }
+    &.badge--lg {
+        padding: 7px 15px !important;
+        font-size: 15px;
+    }
+    &.badge--cap {
+        border-radius: 15px;
+        padding: 5px 15px;
+    }
+    &.badge--round {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 7px !important;
+        line-height: 0.75;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+
+
+.custom--modal .modal-footer,
+  .custom--modal .modal-header {
+    border-color: $section-bg;
+}
+
+.custom--modal .modal-footer .modal-title,
+    .custom--modal .modal-header .modal-title {
+    margin: 0;
+    color: $title-color;
+}
+
+.custom--modal .modal-footer .btn-close,
+    .custom--modal .modal-header .btn-close {
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+    color: $danger;
+    opacity: 1;
+}
+
+.custom--modal .modal-content {
+    border: none;
+    background: $white;
+    color: $white;
+}

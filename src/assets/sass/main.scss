@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400&display=swap');;
+
+@import '_abstracts/_mixins';
+@import '_abstracts/_variables';
+
+@import '_base/_typography';
+
+@import '_components/_buttons';
+
+@import '_layout/_header';
+@import '_layout/_banner';
+@import '_layout/_custom';
+@import '_layout/_footer';
+@import '_layout/_sidebar';
+
+@import '_pages/_account';
+@import '_pages/_contact';
+@import '_pages/_dashboard';
+@import '_pages/_sections';
+
+// Custom
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%shadow {
+    box-shadow: -3.828px -3.828px 6px 0px rgba($base-color,.4), 3px 5px 8px 0px rgba($primary-color,.2);
+}
+
+%shadow2 {
+    box-shadow: -4.828px -4.828px 12px 0px rgba($base-color,.4), 3px 5px 15px 0px rgba($primary-color,.2);
+}
+
+%shadow3 {
+    box-shadow:  11px 11px 32px rgba($primary-color,.2),
+             -11px -11px 32px rgba($base-color,.4);
+}
+
+%base-color {
+    color: $base-color;
+}
+%base-color-bg {
+    background: $base-color;
+}
+%gradient-base {
+    background: $gradient-base;
+}
+%gradient-base-rev {
+    background: $gradient-base-rev;
+}
+
+// Social Icons
+.social-links {
+  @extend %flex;
+  align-items: center;
+  li {
+    padding: 3px;
+    a {
+      width: 40px;
+      height: 40px;
+      @extend %flex-center;
+      font-size: 22px;
+      color: $base-color;
+      border: 1px solid rgba($base-color,.6);
+      border-radius: 50%;
+      @extend %flex-center;
+      &:hover {
+        color: $white;
+        background: $base-color;
+        border-color: $base-color;
+      }
+    }
+  }
+}
+
+// Slick Dots
+.slick-dots {
+  left: 0;
+  li {
+      height: auto;
+      width: auto;
+      &.slick-active {
+            button {
+                background: $base-color;
+            }
+        }
+        button {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px !important;
+            background: rgba($base-color,.2);
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+.slick-arrow{
+    position: absolute;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: $white;
+    background: rgba($primary-color,.9);
+    border-radius: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover ,&.arrow-right {
+        background: $base-color;
+        color: $white;
+    }
+    &.arrow-left  {
+        left: -60px;
+        z-index: 1;
+    }
+    &.arrow-right  {
+        right: -60px;
+        z-index: 1;
+    }
+}
+iframe {
+    margin-bottom: -8px;
+}
+
+
+// Section Header
+.section-header {
+    margin-bottom: 55px;
+    @include breakpoint(max-md) {
+        margin-bottom: 45px;
+    }
+    @include breakpoint(max-xs) {
+        margin-bottom: 40px;
+    }
+    &.text-center {
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &.color-white {
+        * {
+            color: $white;
+        }
+    }
+    &__title {
+        display: inline-block;
+        color: $white;
+        margin-bottom: 15px;
+        position: relative;
+        @include breakpoint(max-md) {
+            margin-bottom: 10px;
+        }
+        @keyframes moveab {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-100%);
+                left: 100%;
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    }
+    p {
+        margin-bottom: 15px;
+        font-size: 19px;
+        @include breakpoint(max-xl) {
+            font-size: 18px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 16px;
+        }
+    }
+}
+
+.rating {
+    @extend %flex;
+    li {
+        padding: 0 3px;
+    }
+}
+
+// Preloader
+.preloader {
+    background: $white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    @extend %flex-center;
+    z-index: 1111;
+}

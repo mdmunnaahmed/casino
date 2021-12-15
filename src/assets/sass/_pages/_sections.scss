@@ -1,0 +1,279 @@
+// About Section Starts Here
+.shape  {
+    position: absolute;
+}
+.about-section {
+    position: relative;
+    .shape1 {
+        top: 30px;
+        opacity: .1;
+        left: 50px;
+        max-width: 300px;
+        z-index: -1;
+    }
+}
+.section-thumb {
+    @include breakpoint(max-lg) {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 50px;
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(max-xs) {
+        margin-top: 40px;
+    }
+}
+// About Section Ends Here
+
+
+// Game Section Starts Here
+.game-section {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.game-item {
+    text-align: center;
+    padding: 35px 40px;
+    border-radius: 10px;
+    background: $body-bg;
+    position: relative;
+    @include transition;
+    @extend %shadow;
+    @include breakpoint(max-xxl) {
+        padding: 35px 30px;
+    }
+    &::before {
+        @include before;
+        left: 0;
+        bottom: 0;
+        width: 35px;
+        height:35px;
+        border-radius: 50%;
+        @extend %shadow;
+        transform: rotate(45deg);
+        @include transition;
+    }
+    &:hover {
+        @extend %shadow2;
+        &::before {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    &__thumb {
+        width: 100%;
+        height: 140px;
+        margin: 0 auto 25px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        background: $section-bg;
+        padding: 10px;
+        @include breakpoint(max-xxl) {
+            height: 130px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 15px;
+            @include breakpoint(max-md) {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-size: 18px;
+            @include breakpoint(max-md) {
+                font-size: 16px;
+            }
+        }
+        .invest-info {
+            text-transform: uppercase;
+        }
+        .invest-amount {
+            color: $base-color;
+        }
+        .cmn--btn {
+            margin-top: 25px;
+        }
+    }
+}
+// Game Section Ends Here
+
+
+// Transection Section Starts Here
+.transection-section {
+    position: relative;
+    .shape1 {
+        top: 0;
+        left: 0;
+        opacity: .1;
+        z-index: -1;
+    }
+}
+.tab-menu {
+    margin-bottom: 40px;
+    li {
+        padding: 3px 8px;
+        .cmn--btn {
+            color: $base-color;
+            background: transparent;
+            &::before {
+                visibility: hidden;
+                opacity: 0;
+            }
+            &.active {
+                color: $dark;
+                @extend %gradient-base;
+            }
+        }
+    }
+}
+.table {
+    thead {
+        tr {
+            th {
+                @extend %gradient-base;
+                color: $dark;
+                font-size: 18px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                font-size: 16px;
+            }
+            .amount {
+                color: $base-color;
+            }
+        }
+    }
+}
+// Transection Section Ends Here
+
+
+// Why Section Ends Here
+.why-item {
+    max-width: 350px;
+    &__thumb {
+        color: $dark;
+        border: 6px solid $body-bg;
+        @extend %gradient-base;
+        font-size: 34px;
+        width: 65px;
+        height:65px;
+        border-radius: 50%;
+        @extend %flex-center;
+        @extend %shadow2;
+        margin-bottom: 20px;
+        @include breakpoint(max-md) {
+            margin-bottom: 15px;
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 7px;
+            font-size: 26px;
+            @include breakpoint(max-xl) {
+                font-size: 22px;
+            }
+        }
+    }
+}
+// Why Section Ends Here
+
+
+// How Section Starts Here
+.how-section {
+    position: relative;
+    &::before  {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+div[class*='col'] {
+    &:last-child {
+        .how-item {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.how-item {
+    text-align: center;
+    padding: 0 25px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 0;
+        border: 1px dashed $base-color;
+        top: 60px;
+    }
+    &__thumb {
+        width: 120px;
+        height:120px;
+        background: $body-bg;
+        border-radius: 50%;
+        @extend %flex-center;
+        @extend %shadow2;
+        font-size: 46px;
+        margin:0 auto 30px;
+        position: relative;
+        .badge {
+            position: absolute;
+            right: -10px;
+            top: 10px;
+            width: 30px;
+            height:30px;
+            @extend %gradient-base;
+            color: $dark !important;
+        }
+        img {
+            max-width: 70px;
+
+        }
+    }
+    &__content {
+        .title {
+            margin-bottom: 5px;
+        }
+        .continue-button {
+            margin-top: 25px;
+        }
+    }
+}
+.continue-button {
+    padding: 10px 30px;
+    // padding-right: 50px;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 24px;
+    @extend %shadow;
+    line-height: 1;
+    
+}
+// How Section Ends Here
