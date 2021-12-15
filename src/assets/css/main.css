@@ -1998,12 +1998,12 @@ div[class*='col']:last-child .how-item::before {
     position: relative;
 }
 
-.how-item:hover .title {
+.how-item:hover .title, .how-item.active .title {
     color: #FFC827;
 }
 
-.how-item:hover .how-item__thumb {
-    color: #FFC827;
+.how-item:hover .how-item__thumb, .how-item.active .how-item__thumb {
+    color: #1f1f23;
 }
 
 .how-item::before {
@@ -2015,6 +2015,12 @@ div[class*='col']:last-child .how-item::before {
     top: 60px;
 }
 
+@media (max-width: 767px) {
+    .how-item::before {
+        display: none;
+    }
+}
+
 .how-item__thumb {
     width: 120px;
     height: 120px;
@@ -2023,9 +2029,6 @@ div[class*='col']:last-child .how-item::before {
     font-size: 46px;
     margin: 0 auto 30px;
     position: relative;
-    -webkit-transition: all ease .3s;
-    -moz-transition: all ease .3s;
-    transition: all ease .3s;
 }
 
 @media (max-width: 991px) {
@@ -2033,6 +2036,12 @@ div[class*='col']:last-child .how-item::before {
         width: 100px;
         height: 100px;
         font-size: 36px;
+    }
+}
+
+@media (max-width: 575px) {
+    .how-item__thumb {
+        margin-bottom: 15px;
     }
 }
 
@@ -2053,6 +2062,12 @@ div[class*='col']:last-child .how-item::before {
     margin-bottom: 5px;
 }
 
+@media (max-width: 991px) {
+    .how-item__content .title {
+        font-size: 20px;
+    }
+}
+
 .how-item__content .continue-button {
     margin-top: 25px;
 }
@@ -2065,12 +2080,133 @@ div[class*='col']:last-child .how-item::before {
     line-height: 1;
 }
 
+.faq-section {
+    position: relative;
+}
+
+.faq-section .shape1 {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    max-width: 500px;
+    z-index: -1;
+    opacity: .15;
+}
+
+.faq-item {
+    height: auto;
+    padding: 10px 25px;
+    background: #2e0327;
+    border: 1px solid rgba(255, 200, 39, 0.15);
+}
+
+.faq-item:not(.faq-item:last-child) {
+    margin-bottom: 10px;
+}
+
+.faq-item.open .faq-item__title .title {
+    color: #FFC827;
+}
+
+.faq-item.open .faq-item__title::before {
+    transform: translateY(-50%) rotate(180deg);
+    color: #FFC827;
+}
+
+.faq-item__title {
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-item__title::before {
+    position: absolute;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: "Line Awesome Free";
+    content: '\f107';
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.faq-item__content {
+    display: none;
+    padding-bottom: 10px;
+}
+
+div[class*='col']:nth-child(even) > .faq-item {
+    padding-left: 25px;
+}
+
+.top-section {
+    position: relative;
+}
+
+.top-section::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #2e0327;
+    opacity: .9;
+}
+
+.top-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.top-section .title {
+    font-size: 30px;
+}
+
+.top-investor-slider .slick-list {
+    padding: 15px 0 !important;
+}
+
+.investor-item, .winner-item {
+    text-align: center;
+}
+
+.investor-item__thumb, .winner-item__thumb {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.investor-item__thumb img, .winner-item__thumb img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #FFC827;
+}
+
+.investor-item .amount, .winner-item .amount {
+    position: absolute;
+    padding: 0px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    top: calc(100% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1f1f23;
+    font-weight: 600;
+}
+
 .header-bottom-area, .menu, .pagination, .social-links, .rating {
     display: flex;
     flex-wrap: wrap;
 }
 
-.video-button, .why-item__thumb, .how-item__thumb, .social-links li a, .preloader {
+.video-button, .why-item__thumb, .how-item__thumb, .investor-item__thumb, .winner-item__thumb, .social-links li a, .preloader {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2080,7 +2216,7 @@ div[class*='col']:last-child .how-item::before {
     box-shadow: -3.828px -3.828px 6px 0px rgba(255, 200, 39, 0.4), 3px 5px 8px 0px rgba(255, 82, 1, 0.2);
 }
 
-.game-item:hover, .why-item__thumb, .how-item__thumb {
+.game-item:hover, .why-item__thumb, .how-item__thumb, .investor-item__thumb, .winner-item__thumb, .investor-item .amount, .winner-item .amount {
     box-shadow: -4.828px -4.828px 12px 0px rgba(255, 200, 39, 0.4), 3px 5px 15px 0px rgba(255, 82, 1, 0.2);
 }
 
@@ -2088,7 +2224,7 @@ div[class*='col']:last-child .how-item::before {
     box-shadow: 11px 11px 32px rgba(255, 82, 1, 0.2), -11px -11px 32px rgba(255, 200, 39, 0.4);
 }
 
-.btn, .cmn--btn, .banner-content .button-wrapper .cmn--btn, .tab-menu li .cmn--btn.active, .table thead tr th, .why-item__thumb, .how-item__thumb .badge {
+.btn, .cmn--btn, .banner-content .button-wrapper .cmn--btn, .tab-menu li .cmn--btn.active, .table thead tr th, .why-item__thumb, .how-item:hover .how-item__thumb, .how-item.active .how-item__thumb, .how-item__thumb .badge, .investor-item .amount, .winner-item .amount {
     background: linear-gradient(0deg, #ff9c19 40%, #ffdd2d 110%);
 }
 

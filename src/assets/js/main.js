@@ -56,8 +56,6 @@ over.on('click', function() {
 //   header.classList.toggle('sticky', window.scrollY > 0);
 // });
 
-// Nice Select
-// $('.nice-select').niceSelect();
 
 // Scroll To Top 
 var scrollTop = $(".scrollToTop");
@@ -76,18 +74,6 @@ $('.scrollToTop').on('click', function () {
   }, 300);
   return false;
 });
-
-
-$('.header-top-trigger').on('click', function() {
-  var e = $('.header-top')
-  if(e.hasClass('active')) {
-    $('.header-top').removeClass('active')
-    $('.overlay').removeClass('active')
-  }else {
-    $('.header-top').addClass('active')
-    $('.overlay').addClass('active')
-  }
-})
 
 $('.feature__slider').slick({
   fade: false,
@@ -170,9 +156,9 @@ $('.plan__slider').slick({
   ]
 });
 
-$('.brand__slider').slick({
+$('.top-investor-slider').slick({
   fade: false,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
@@ -184,7 +170,7 @@ $('.brand__slider').slick({
     {
       breakpoint: 1199,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
       }
     },
     {
@@ -222,19 +208,18 @@ $(".counter__item, .dashboard__card__item").each(function () {
 });
 
 //Faq
-$('.faq__item-title').on('click', function (e) {
-  var element = $(this).parent('.faq__item');
+$('.faq-item__title').on('click', function (e) {
+  var element = $(this).parent('.faq-item');
   if (element.hasClass('open')) {
     element.removeClass('open');
-    element.find('.faq__item-content').removeClass('open');
-    element.find('.faq__item-content').slideUp(300, "swing");
+    element.find('.faq-item__content').removeClass('open');
+    element.find('.faq-item__content').slideUp(300, "swing");
   } else {
     element.addClass('open');
-    element.children('.faq__item-content').slideDown(300, "swing");
-    element.siblings('.faq__item').children('.faq__item-content').slideUp(300, "swing");
-    element.siblings('.faq__item').removeClass('open');
-    element.siblings('.faq__item').find('.faq-title').removeClass('open');
-    element.siblings('.faq__item').find('.faq__item-content').slideUp(300, "swing");
+    element.children('.faq-item__content').slideDown(300, "swing");
+    element.siblings('.faq-item').children('.faq-item__content').slideUp(300, "swing");
+    element.siblings('.faq-item').removeClass('open');
+    element.siblings('.faq-item').find('.faq-item__content').slideUp(300, "swing");
   }
 });
 
@@ -254,35 +239,7 @@ $('.video-button').magnificPopup({
   // other options
 });
 
-$(window).on(('load'), function(){
-  // filter functions
-  var $gallery = $(".game-wrapper");
-  var filterFns = {};
-  $gallery.isotope({
-    itemSelector: '.game-item',
-    masonry: {
-      columnWidth: 0,
-    }
-  });
-  // bind filter button click
-  $('ul.filter').on('click', 'li', function () {
-    $('ul.filter li').removeClass('active');
-    $(this).addClass('active');
-    var filterValue = $(this).attr('data-filter');
-    filterValue = filterFns[filterValue] || filterValue;
-    $gallery.isotope({
-      filter: filterValue
-    });
-  });
-})
-
-$(document).ready(function(){
-  $(".game-item").slice(0, 4).show();
-  $("#game-load").on("click", function(e){
-    e.preventDefault();
-    $(".game-item:hidden").slice(0, 2).slideDown();
-    if($(".game-item:hidden").length == 0) {
-      $("#game-load").text("No Content").addClass("noContent");
-    }
-  });
+$('.how-item').on('mouseover', function() {
+  $('.how-item').removeClass('active')
+  $(this).addClass('active')
 })

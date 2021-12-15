@@ -225,12 +225,13 @@ div[class*='col'] {
     text-align: center;
     padding: 0 25px;
     position: relative;
-    &:hover {
+    &:hover, &.active {
         .title {
             color: $base-color;
         }
         .how-item__thumb {
-            color: $base-color;
+            @extend %gradient-base;
+            color: $dark;
         }
     }
     &::before {
@@ -240,6 +241,9 @@ div[class*='col'] {
         height: 0;
         border: 1px dashed rgba($base-color,.7);
         top: 60px;
+        @include breakpoint(max-md) {
+            display: none;
+        }
     }
     &__thumb {
         width: 120px;
@@ -251,11 +255,13 @@ div[class*='col'] {
         font-size: 46px;
         margin:0 auto 30px;
         position: relative;
-        @include transition;
         @include breakpoint(max-lg) {
             width: 100px;
             height: 100px;
             font-size: 36px;
+        }
+        @include breakpoint(max-sm) {
+            margin-bottom: 15px;
         }
         .badge {
             position: absolute;
@@ -274,7 +280,9 @@ div[class*='col'] {
     &__content {
         .title {
             margin-bottom: 5px;
-            @include breakpoint(max)
+            @include breakpoint(max-lg) {
+                font-size: 20px;
+            }
         }
         .continue-button {
             margin-top: 25px;
@@ -292,3 +300,120 @@ div[class*='col'] {
     
 }
 // How Section Ends Here
+
+
+// Faq Section Starts Here
+.faq-section {
+    position: relative;
+    .shape1 {
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        max-width: 500px;
+        z-index: -1;
+        opacity: .15;
+    }
+}
+.faq-item {
+    height: auto;
+    padding: 10px 25px;
+    background: $section-bg;
+    border: 1px solid rgba($base-color,.15);
+    &:not(&:last-child) {
+        margin-bottom: 10px;
+    }
+    &.open {
+        .faq-item__title {
+            .title {
+                color: $base-color;
+            }
+            &::before {
+                transform: translateY(-50%) rotate(180deg);
+                color: $base-color;
+            }
+        }
+    }
+    &__title {
+        padding: 10px 0;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            @include line-ico;
+            content: '\f107';
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include transition;
+        }
+    }
+    &__content {
+        // padding-left: 20px;
+        display: none;
+        padding-bottom: 10px;
+    }
+}
+div[class*='col'] {
+    &:nth-child(even) {
+        >.faq-item {
+            padding-left: 25px;
+        }
+    }
+}
+// Faq Section Ends Here
+
+
+// Top Investor & Winner Section Starts Here
+.top-section {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .title {
+        font-size: 30px;
+    }
+}
+
+.top-investor-slider {
+    .slick-list {
+        padding: 15px 0 !important;
+    }
+}
+
+.investor-item, .winner-item {
+    text-align: center;
+    &__thumb {
+        width: 100px;
+        height:100px;
+        margin: 0 auto 15px;
+        @extend %shadow2;
+        border-radius: 50%;
+        @extend %flex-center;
+        position: relative;
+        img {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            background: $base-color;
+        }
+    }
+    .amount {
+        position: absolute;
+        padding: 0px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        @extend %shadow2;
+        top: calc(100% - 25px);
+        left: 50%;
+        transform: translateX(-50%);
+        @extend %gradient-base;
+        color: $dark;
+        font-weight: 600;
+    }
+}
+// Top Investor & Winner Section Ends Here
