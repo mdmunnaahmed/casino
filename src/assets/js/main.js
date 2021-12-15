@@ -115,16 +115,17 @@ $('.feature__slider').slick({
 
   ]
 });
-$('.plan__slider').slick({
+
+$('.testimonial-slider').slick({
   fade: false,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
   pauseOnHover: true,
   centerMode: false,
-  dots: false,
-  arrows: true,
+  dots: true,
+  arrows: false,
   nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
   prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
   responsive: [
@@ -135,7 +136,7 @@ $('.plan__slider').slick({
       }
     },
     {
-      breakpoint: 991,
+      breakpoint: 992,
       settings: {
         slidesToShow: 2,
       }
@@ -143,7 +144,7 @@ $('.plan__slider').slick({
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
       }
     },
     {
@@ -176,7 +177,7 @@ $('.top-investor-slider').slick({
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
       }
     },
     {
@@ -186,7 +187,7 @@ $('.top-investor-slider').slick({
       }
     },
     {
-      breakpoint: 575,
+      breakpoint: 400,
       settings: {
         slidesToShow: 2,
       }

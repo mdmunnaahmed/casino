@@ -345,6 +345,9 @@ div[class*='col'] {
             transform: translateY(-50%);
             @include transition;
         }
+        .title {
+            font-weight: 400;
+        }
     }
     &__content {
         // padding-left: 20px;
@@ -375,8 +378,8 @@ div[class*='col'] {
         z-index: 1;
     }
     .part-title {
-        font-size: 30px;
-        text-align: right;
+        font-size: 20px;
+        text-align: center;
     }
 }
 
@@ -396,11 +399,28 @@ div[class*='col'] {
         border-radius: 50%;
         @extend %flex-center;
         position: relative;
+        @include breakpoint(max-xl) {
+            width: 80px;
+            height: 80px;
+        }
         img {
             border-radius: 50%;
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             background: $base-color;
+            @include breakpoint(max-xl) {
+                width: 65px;
+                height:65px;
+            }
+        }
+    }
+    &__content {
+        .name {
+            font-size: 16px;
+            font-weight: 400;
+            @include breakpoint(max-xl) {
+                font-size: 14px;
+            }
         }
     }
     .amount {
@@ -421,5 +441,172 @@ div[class*='col'] {
 .cla-wrapper {
     max-width: 250px;
     margin: 0 auto;
+    position: relative;
+    .title {
+        font-size: 28px;
+    }
+    .thumb {
+        margin-top: 25px;
+        &::before {
+            position: absolute;
+            content: '';
+            box-shadow: 0 0 50px 50px rgba($base-color,.7);
+            border-radius: 50%;
+            @include transform-center;
+            transform: translateY(50px);
+        }
+        img {
+            width: 100%;
+        }
+    }
 }
 // Top Investor & Winner Section Ends Here
+
+
+// Testimonial Section Starts Here
+.testimonial-slider {
+    .slick-list {
+        padding: 15px 0 !important;
+        @include breakpoint(max-lg) {
+
+        }
+    }
+    .single-slide {
+        margin: 0 12px;
+    }
+}
+.testimonial-item {
+    text-align: center;
+    padding: 30px;
+    @extend %shadow;
+    position: relative;
+    @include breakpoint(max-xl) {
+        padding: 30px 15px;
+    }
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .95;
+    }
+    .testimonial-inner {
+        position: relative;
+        z-index: 1;
+    }
+    .quote-icon {
+        font-size: 52px;
+        line-height: 1;
+        @include gradient-color($gradient-base);
+        margin-bottom: 10px;
+    }
+    &__content {
+        margin-bottom: 25px;
+    }
+
+    .thumb-wrapper {
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .thumb {
+        width: 65px;
+        height:65px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: $base-color;
+        img {
+            width: 100%;
+            height:100%;
+
+        }
+    }
+    .content {
+        padding-left: 15px;
+        text-align: left;
+        .designation {
+            font-size: 13px;
+            color: $base-color;
+        }
+    }
+}
+// Testimonial Section Ends Here
+
+
+// Blog Section Starts Here
+.blog-section {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.blog__item {
+    border-radius: 5px;
+    overflow: hidden;
+    // @extend %shadow;
+    border: 1px solid rgba($base-color,.15);
+    background: $body-bg;
+    // padding: 15px;
+    &:hover {
+        .blog__thumb {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.blog__thumb {
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+    }
+}
+.blog__content {
+    padding: 25px;
+    border-top: 0;
+    @include breakpoint(max-xl) {
+        padding: 15px;
+    }
+}
+.blog__meta {
+    i {
+        color: $base-color;
+        font-size: 16px;
+    }
+    font-size: 14px;
+}
+.blog__author {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px dashed rgba($dark,.1);
+    font-size: 15px;
+    .read-more-btn {
+        position: relative;
+        padding-left: 15px;
+        color: $base-color;
+        &:hover {
+            padding-left: 5px;
+            &::before {
+                background: $base-color;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 35px;
+            height: 1px;
+            background: $base-color;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            @include transition;
+        }
+    }
+}
+
+// Blog Section Ends Here
