@@ -374,8 +374,9 @@ div[class*='col'] {
         position: relative;
         z-index: 1;
     }
-    .title {
+    .part-title {
         font-size: 30px;
+        text-align: right;
     }
 }
 
@@ -390,7 +391,7 @@ div[class*='col'] {
     &__thumb {
         width: 100px;
         height:100px;
-        margin: 0 auto 15px;
+        margin: 0 auto 25px;
         @extend %shadow2;
         border-radius: 50%;
         @extend %flex-center;
@@ -408,12 +409,17 @@ div[class*='col'] {
         border-radius: 20px;
         font-size: 13px;
         @extend %shadow2;
-        top: calc(100% - 25px);
+        top: calc(100% - 15px);
         left: 50%;
         transform: translateX(-50%);
         @extend %gradient-base;
         color: $dark;
         font-weight: 600;
     }
+}
+
+.cla-wrapper {
+    max-width: 250px;
+    margin: 0 auto;
 }
 // Top Investor & Winner Section Ends Here

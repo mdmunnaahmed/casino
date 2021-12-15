@@ -2162,8 +2162,9 @@ div[class*='col']:nth-child(even) > .faq-item {
     z-index: 1;
 }
 
-.top-section .title {
+.top-section .part-title {
     font-size: 30px;
+    text-align: right;
 }
 
 .top-investor-slider .slick-list {
@@ -2177,7 +2178,7 @@ div[class*='col']:nth-child(even) > .faq-item {
 .investor-item__thumb, .winner-item__thumb {
     width: 100px;
     height: 100px;
-    margin: 0 auto 15px;
+    margin: 0 auto 25px;
     border-radius: 50%;
     position: relative;
 }
@@ -2194,11 +2195,16 @@ div[class*='col']:nth-child(even) > .faq-item {
     padding: 0px 10px;
     border-radius: 20px;
     font-size: 13px;
-    top: calc(100% - 25px);
+    top: calc(100% - 15px);
     left: 50%;
     transform: translateX(-50%);
     color: #1f1f23;
     font-weight: 600;
+}
+
+.cla-wrapper {
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .header-bottom-area, .menu, .pagination, .social-links, .rating {
