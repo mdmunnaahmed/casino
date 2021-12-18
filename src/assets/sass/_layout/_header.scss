@@ -18,7 +18,6 @@
     }
 }
 
-
 // Header Section Starts Here
 .header {
     position: absolute;
@@ -106,12 +105,32 @@
         a {
             display: block;
             padding: 4px 15px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
             font-family: $heading;
-            &:hover {
-                color: $white;
+            color: $white; 
+            position: relative;
+            .badge {
+                position: absolute;
+                font-weight: 600;
+                top: -12px;
+                right: -8px;
+                font-size: 9px;
+                color: $dark !important;
+                border-radius: 3px 3px 3px 0 !important;
+                line-height: .93 !important;
+                padding: 4px 5px 2px !important;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: calc(100% - 1px);
+                    left: 0;
+                    background: $base-color;
+                    width: 8px;
+                    height: 5px;
+                    clip-path: polygon(0 100%, 0 0, 100% 0);
+                }
             }
         }
     }
@@ -120,7 +139,8 @@
     .menu {
         li {
             a {
-                font-size: 16px;
+                font-size: 15px;
+                padding: 4px 10px;
             }
         }
     }
@@ -144,7 +164,7 @@
         left: 0px;
         opacity: 0;
         visibility: hidden;
-        min-width: 160px;
+        min-width: 220px;
         @include transition;
         transform: translateY(15px);
         box-shadow: 0 3px 12px 3px rgba($primary-color,.1);
@@ -157,16 +177,14 @@
                 border: none
             }
             a {
-                white-space: nowrap;
                 color: $dark;
                 padding: 7px 15px;
                 display: block;
                 @include text-wrap;
                 -webkit-line-clamp: 1;
-                font-weight: 500;
                 &:hover {
-                        padding-left: 25px;
-                        background: $base-color;
+                    padding-left: 20px;
+                    background: $base-color;
                 }
             }
         }
@@ -247,7 +265,7 @@
             }
             a {
                 color: $white;
-                display: block;
+                display: inline-block;
             }
             &.has-sub-menu {
                 a {

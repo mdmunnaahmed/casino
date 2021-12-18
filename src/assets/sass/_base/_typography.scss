@@ -9,6 +9,10 @@ body {
     line-height: $lh-p;
     font-family: $body;
     background: $body-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 h1,
 h2,
@@ -82,21 +86,27 @@ ul {
     background-attachment: fixed !important;
 }
 .form-label {
-    cursor: pointer;
+    font-size: 15px;
+    color: $white;
 }
 .form--control {
     height: 50px;
-    padding: 0 20px;
     border-radius: 5px;
-    transition: all ease .15s;
     color: $body-color;
     border: 1px solid $border-color;
     outline: 0;
-    box-shadow: 0;
+    box-shadow: none;
+    background: $body-bg;
     &:focus {
-      box-shadow: 1px 1px 15px 3px rgba($base-color, .08);
-      border: 1px solid rgba($base-color,.7);
+        background: $body-bg;
+        border: 1px solid rgba($base-color,.6);
+        outline: 0;
+        box-shadow: none;
     }
+}
+::-webkit-input-placeholder {
+    color: $body-color;
+    line-height: 1;
 }
 .h-40 {
     height: 40px !important;
@@ -107,10 +117,7 @@ ul {
 .h-50 {
     height: 50px !important;
 }
-::-webkit-input-placeholder {
-    color: $body-color;
-    line-height: 1;
-}
+
 textarea.form--control {
     height: 150px;
     padding-top: 10px;

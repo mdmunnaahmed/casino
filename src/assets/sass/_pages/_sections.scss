@@ -2,6 +2,17 @@
 .shape  {
     position: absolute;
 }
+.bg_img {
+    position: relative;
+    &::before {
+        @include before-set;
+        background: $section-bg;
+        opacity: .9;
+    }
+    .container {
+        position: relative;
+    }
+}
 .about-section {
     position: relative;
     .shape1 {
@@ -48,11 +59,20 @@
     background: $body-bg;
     position: relative;
     @include transition;
+    overflow: hidden;
     @extend %shadow;
+    z-index: 1;
+    &::after {
+        @include before-set;
+        background: url(./../images/game/shape.png);
+        border-radius: 10px;
+        z-index: -1;
+        overflow: hidden;
+    }
     @include breakpoint(max-xxl) {
         padding: 35px 30px;
     }
-    &::before {
+    .ball {
         @include before;
         left: 0;
         bottom: 0;
@@ -63,19 +83,28 @@
         transform: rotate(45deg);
         @include transition;
     }
+    &::before {
+        @include before-set;
+        background: $body-bg;
+        opacity: .9;
+    }
     &:hover {
         @extend %shadow2;
-        &::before {
+        .ball {
             width: 45px;
             height: 45px;
         }
+    }
+    .game-inner {
+        position: relative;
+        z-index: 1;
     }
     &__thumb {
         width: 100%;
         height: 140px;
         margin: 0 auto 25px;
         border: 1px solid $border-color;
-        border-radius: 5px;
+        border-radius: 7px;
         background: $section-bg;
         padding: 10px;
         @include breakpoint(max-xxl) {
@@ -167,6 +196,15 @@
 
 
 // Why Section Ends Here
+.why-section {
+    position: relative;
+    .shape1 {
+        left: -100px;
+        top: 50px;
+        z-index: -1;
+        opacity: .1;
+    }
+}
 .why-item {
     max-width: 350px;
     &__thumb {
@@ -464,6 +502,15 @@ div[class*='col'] {
 
 
 // Testimonial Section Starts Here
+.testimonial-section {
+    position: relative;
+    .shape1 {
+        left: -100px;
+        top: 50px;
+        z-index: -1;
+        opacity: .1;
+    }
+}
 .testimonial-slider {
     .slick-list {
         padding: 15px 0 !important;
@@ -544,33 +591,41 @@ div[class*='col'] {
         z-index: 1;
     }
 }
-.blog__item {
+.blog-item {
     border-radius: 5px;
     overflow: hidden;
     // @extend %shadow;
     border: 1px solid rgba($base-color,.15);
     background: $body-bg;
-    // padding: 15px;
+    padding: 20px;
+    &__thumb {
+        overflow: hidden;
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    &__content {
+        padding: 5px;
+        padding-top: 25px;
+        padding-bottom: 0;
+        @include breakpoint(max-xl) {
+            padding: 15px;
+        }
+        .title {
+            a {
+                @include text-wrap;
+            }
+        }
+    }
     &:hover {
-        .blog__thumb {
+        .blog-item__thumb {
             img {
                 transform: scale(1.1);
             }
         }
-    }
-}
-.blog__thumb {
-    overflow: hidden;
-    position: relative;
-    img {
-        width: 100%;
-    }
-}
-.blog__content {
-    padding: 25px;
-    border-top: 0;
-    @include breakpoint(max-xl) {
-        padding: 15px;
     }
 }
 .blog__meta {
@@ -580,33 +635,115 @@ div[class*='col'] {
     }
     font-size: 14px;
 }
-.blog__author {
-    padding-top: 10px;
-    margin-top: 10px;
-    border-top: 1px dashed rgba($dark,.1);
-    font-size: 15px;
-    .read-more-btn {
-        position: relative;
-        padding-left: 15px;
-        color: $base-color;
-        &:hover {
-            padding-left: 5px;
-            &::before {
-                background: $base-color;
+// Blog Section Ends Here
+
+
+
+// Blog Details Section Starts Here
+.blog-details-wrapper {
+    padding-right: 40px;
+    @include breakpoint(max-xl) {
+        padding-right: 0;
+    }
+    .details-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    .details-content {
+        padding: 40px 0;
+        .meta-post {
+            @extend %flex;
+            align-items: center;
+            padding: 15px 0;
+            padding-bottom: 25px;
+            font-size: 15px;
+            li {
+                margin-right: 25px;
+                i {
+                    margin-right: 5px;
+                    font-size: 17px;
+                }
+                a {
+                    color: $base-color
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
-        &::before {
-            position: absolute;
-            content: '';
-            width: 35px;
-            height: 1px;
-            background: $base-color;
-            right: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            @include transition;
+        .details-inner {
+            padding: 12px 0;
+            .subtitle {
+                margin-bottom: 10px;
+            }
         }
     }
 }
+.blog-sidebar {
+    position: sticky;
+    top: 20px;
+    padding: 35px 25px;
+    background: $section-bg;
+    @include breakpoint(max-xl) {
+        @include breakpoint(lg) {
+            padding: 0;
+            background: transparent;
+        }
+        @include breakpoint(max-xs) {
+            padding: 0;
+            background: transparent;
+        }
+    }
+}
+.recent-post-item {
+    @extend %flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:hover .hover-line a {
+        background-size: 100% 2px !important;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .thumb {
+        width: 110px;
+        height: 80px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+    .content {
+        width: calc(100% - 110px);
+        padding-left: 15px;
+        .title {
+            @include text-wrap;
+            font-size: 16px;
+        }
+        .hover-line a {
+            position: relative;
+            display: inline;
+            background: linear-gradient(to right,currentColor 0%,currentColor 100%); 
+            background-size: 0px 2px;
+            background-position: 0 95%;
+            transition: background-size .25s cubic-bezier(.785,.135,.15,.86) 0s;
+            padding: .1% 0;
+            background-repeat: no-repeat;
+            width: 100%;
+            color: inherit;
+        }
+        .date {
+            font-size: 13px;
+            i {
+                color: $base-color;
+                margin-right: 4px;
+                font-size: 15px;
 
-// Blog Section Ends Here
+            }
+        }
+    }
+}
+// Blog Details Section Ends Here

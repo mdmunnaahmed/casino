@@ -6,6 +6,12 @@
         max-width: 220px;
         right: 0;
         bottom: 0;
+        @media (max-width:1700px) {
+            max-width: 150px;
+        }
+        @include breakpoint(max-xl) {
+            display: none;
+        }
     }
     &::before {
         @include before-set;
@@ -22,6 +28,9 @@
         padding: 3px 10px;
         a {
             color: $white;
+            &:hover {
+                color: $base-color;
+            }
         }
     }
 }
@@ -34,7 +43,6 @@
         }
     }
 }
-
 
 .footer-bottom {
     padding-top: 25px;

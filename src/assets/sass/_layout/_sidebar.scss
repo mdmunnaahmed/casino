@@ -11,13 +11,18 @@
         padding: 3px;
         a,
         span {
+            font-weight: 600;
             width: 45px;
             height: 45px;
             color: $base-color;
             line-height: 45px;
             padding: 0;
             // border: none;
-            border-color: rgba($base-color,.4);
+            border-radius: 50% !important;
+            border-color: rgba($base-color,.1);
+            background: $body-bg;
+            box-shadow: none;
+            outline: 0;
         }
         span {
             border: none;
@@ -27,14 +32,14 @@
             span,
             a {
                 background: $base-color;
-                color: $white;
-                border-color: rgba($title-color,.2);
+                color: $dark;
+                border-color: rgba($base-color,1);
             }
         }
         &.disabled {
             cursor: no-drop !important;
             span, a {
-                background: rgba($section-bg, .5);
+                background: rgba($white, .05);
                 border: none;
                 color: $title-color;
             }
