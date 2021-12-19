@@ -1,0 +1,78 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../partial-html/_header.html')
+@@include('../partial-html/_inner-hero.html', {
+    pageTitle: 'Contact Page',
+    activePage: 'Contact'
+})
+
+    <!-- Contact Section Starts Here -->
+    <div class="contact-section padding-top padding-bottom">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="row justify-content-end">
+                    <div class="col-lg-10">
+                        <form class="contact-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fname" class="form-label">First Name <span class="text--danger">*</span></label>
+                                        <input id="fname" type="text" class="form-control form--control"></input>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname" class="form-label">Last Name <span class="text--danger">*</span></label>
+                                        <input id="lname" type="text" class="form-control form--control"></input>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address <span class="text--danger">*</span></label>
+                                        <input id="email" type="text" class="form-control form--control"></input>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number <span class="text--danger">*</span></label>
+                                        <input id="phone" type="text" class="form-control form--control"></input>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="msg" class="form-label">Your Message <span class="text--danger">*</span></label>
+                                        <textarea id="msg" class="form-control form--control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button class="cmn--btn active">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h4 class="title">Contact Information</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="las la-map-marked"></i>
+                            Rajkumar Road #12 Uttara Dhaka 1230.
+                        </li>
+                        <li>
+                            <a href="tel:908457">
+                                <i class="las la-phone-volume"></i>
+                                +88 0912-38754 8192
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section Ends Here -->
+
+    @@include('../partial-html/_footer.html')
+    @@include('../partial-html/_template-bottom.html')
+
+</body>
+</html>
