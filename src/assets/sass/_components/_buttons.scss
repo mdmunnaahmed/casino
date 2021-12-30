@@ -1,7 +1,7 @@
 .btn, .cmn--btn {
     color: $dark;
     padding: 12px 35px;
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 500;
     font-family: $heading;
     cursor: pointer;
@@ -13,15 +13,35 @@
     z-index: 1;
     border: 0;
     @include breakpoint(max-xl) {
-        font-size: 20px;
-    }
-    @include breakpoint(max-xs) {
         font-size: 18px;
     }
     &:hover {
         color: $dark;
-        box-shadow: -4.828px -4.828px 20px 0px rgba($base-color,.6), 3px 5px 20px 0px rgba($primary-color,.2);
+        box-shadow: -5px -5px 20px 0px rgba($base-color,.6), 3px 5px 20px 0px rgba($primary-color,.2);
         @extend %shadow3;
+    }
+    
+    &.btn--lg {
+        padding: 13px 35px !important;
+        font-size: 24px;
+        @include breakpoint(max-lg) {
+            font-size: 22px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 20px;
+        }
+    }
+    &.btn--md {
+        padding: 10px 25px !important;
+        font-size: 15px;
+    }
+    &.btn--sm {
+        padding: 5px 15px !important;
+        font-size: 14px;
+    }
+    &.btn--xs {
+        padding: 0px 10px !important;
+        font-size: 13px;
     }
 }
 .cmn--btn {

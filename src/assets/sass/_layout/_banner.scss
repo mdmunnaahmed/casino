@@ -80,7 +80,9 @@
             margin: 5px 10px;
             @extend %gradient-base;
             i {
-                font-size: 28px;
+                font-size: 22px;
+                line-height: 1;
+                transform: translateY(2px);
             }
         }
     }

@@ -92,12 +92,13 @@ ul {
 .form--control {
     height: 50px;
     border-radius: 5px;
-    color: $body-color;
     border: 1px solid $border-color;
     outline: 0;
     box-shadow: none;
+    color: $body-color;
     background: $body-bg;
     &:focus {
+        color: $white;
         background: $body-bg;
         border: 1px solid rgba($base-color,.6);
         outline: 0;
@@ -106,7 +107,7 @@ ul {
 }
 ::-webkit-input-placeholder {
     color: $body-color;
-    line-height: 1;
+    // line-height: 1;
 }
 .h-40 {
     height: 40px !important;

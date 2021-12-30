@@ -747,3 +747,82 @@ div[class*='col'] {
     }
 }
 // Blog Details Section Ends Here
+
+
+// Privacy Policy Section Starts Here
+.privacy-policy {
+    overflow: initial !important;
+}
+.privacy-policy-sidebar-menu {
+    position: sticky;
+    top: 20px;
+    li {
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px dashed $border-color;
+        &:last-child {
+            border: 0;
+        }
+        a {
+            padding: 12px 0;
+            color: $body-color;
+            display: block;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 3px;
+                height: 0;
+                background: $base-color;
+                right: 0;
+                top: 0;
+                @include transition;
+            }
+            &.active {
+                color: $base-color;
+                &::before {
+                    height: 100%;
+                    transform-origin: bottom;
+                }
+            }
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+}
+.privacy-policy-content {
+    padding-left: 40px;
+    @include breakpoint(max-xl) {
+        padding-left: 20px;
+    }
+    @include breakpoint(max-lg) {
+        padding-left: 0px;
+    }
+    .content-item {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title {
+            margin-bottom: 15px;
+        }
+        .info-list {
+            margin-top: 15px;
+            li {
+                padding-left: 25px;
+                position: relative;
+                &::before {
+                    @include line-ico;
+                    content: "\f101";
+                    left: 0;
+                    top: 6px;
+                    color: $base-color;
+                }
+            }
+        }
+    }
+}
+// Privacy Policy Section Ends Here
