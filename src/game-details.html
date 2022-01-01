@@ -1,5 +1,5 @@
-<!-- meta tags and other links -->
-<!DOCTYPE html>
+    <!-- meta tags and other links -->
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
 
         <div class="overlay"></div>
 
-<div class="header">
+    <div class="header">
     <div class="container">
         <div class="header-bottom">
             <div class="header-bottom-area align-items-center">
@@ -83,15 +83,15 @@
         </div>
     </div>
 </div>
-<!-- inner hero section start -->
+    <!-- inner hero section start -->
 <section class="inner-banner bg_img" style="background: url('assets/images/inner-banner/bg2.jpg') top;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7 col-xl-6 text-center">
-        <h2 class="title text-white">Contact Page</h2>
+        <h2 class="title text-white">Game Details</h2>
         <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
           <li><a href="index.html">Home</a></li>
-          <li>Contact</li>
+          <li>Game Details</li>
         </ul>
       </div>
     </div>
@@ -99,61 +99,63 @@
 </section>
 <!-- inner hero section end -->
 
-    <!-- Contact Section Starts Here -->
-    <div class="contact-section padding-top padding-bottom">
+    <section class="padding-top padding-bottom">
         <div class="container">
-            <div class="contact-wrapper">
-                <div class="row justify-content-end">
-                    <div class="col-lg-5">
-                        <div class="section-thumb contact-thumb rtl">
-                            <img src="assets/images/contact/thumb.png" alt="contact">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <form class="contact-form">
-                            <h3 class="title mb-3">Get In Touch</h3>
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="fname" class="form-label">First Name <span class="text--danger">*</span></label>
-                                        <input id="fname" type="text" class="form-control form--control"></input>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="lname" class="form-label">Last Name <span class="text--danger">*</span></label>
-                                        <input id="lname" type="text" class="form-control form--control"></input>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Email Address <span class="text--danger">*</span></label>
-                                        <input id="email" type="text" class="form-control form--control"></input>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone" class="form-label">Phone Number <span class="text--danger">*</span></label>
-                                        <input id="phone" type="text" class="form-control form--control"></input>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="msg" class="form-label">Your Message <span class="text--danger">*</span></label>
-                                        <textarea id="msg" class="form-control form--control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <button class="cmn--btn active">Send Message</button>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card-body h-100 middle-el">
+                        <div class="game-details-left">
+                            <div id="coin-flip-cont">
+                                <div class="coins-wrapper">
+                                    <div class="front"><img src="https://script.viserlab.com/xaxino/assets/templates/basic/images/play/head.png" alt=""></div>
+                                    <div class="back"><img src="https://script.viserlab.com/xaxino/assets/templates/basic/images/play/tail.png" alt=""></div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="cd-ft"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="game-details-right">
+                        <form method="post" id="game" novalidate="novalidate">
+                            <input type="hidden" name="_token" value="x8Ih1jaB80xdAq8yjL1A398E7s8ZooLn3joH2MrY">
+                            <h3 class="mb-4 text-center f-size--28">Current Balance : <span class="base--color"><span class="bal">100</span> USD</span></h3>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="invest" class="form-control amount-field" placeholder="Enter amount">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">USD</span>
+                                    </div>
+                                </div>
+                                <small class="form-text text-muted"><i class="fas fa-info-circle mr-2"></i>Minimum: 1 USD | Maximum: 500.00 USD | <span class="text-warning">Win Amount  1  %</span></small>
+                            </div>
+                            <div class="form-group mt-5 justify-content-center d-flex">
+                                <div class="single-select head gmimg active">
+                                    <img src="https://script.viserlab.com/xaxino/assets/templates/basic//images/play/head.png" alt="game-image">
+                                </div>
+                                <div class="single-select tail gmimg">
+                                    <img src="https://script.viserlab.com/xaxino/assets/templates/basic//images/play/tail.png" alt="game-image">
+                                </div>
+                                <input type="hidden" name="choose" value="head">
+                            </div>
+                            <div class="mt-5 text-center">
+                                <button type="submit" id="flip" class="cmn-btn w-100 text-center">Play Now</button>
+                                <a data-toggle="modal" data-target="#exampleModalCenter" class="mt-1 btn btn-link">Game Instruction <i class="las la-info-circle"></i></a>
+                            </div>
+                            <select name="" id="" class="form-select form--select">
+                                <option value="">012</option>
+                                <option value="">012</option>
+                                <option value="">012</option>
+                                <option value="">012</option>
+                                <option value="">012</option>
+                            </select>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Contact Section Ends Here -->
+    </section>
+
 
     <!-- Footer Section Starts Here -->
 <footer class="footer-section bg_img" style="background: url(assets/images/footer/bg.jpg) center;">
@@ -196,6 +198,5 @@
 
 <!-- main js -->
 <script src="assets/js/main.js"></script>  
-
 </body>
 </html>

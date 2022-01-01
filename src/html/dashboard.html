@@ -1,18 +1,141 @@
     <!-- meta tags and other links -->
     @@include('../partial-html/_template-top.html')
-    @@include('../partial-html/_header.html')
+    @@include('../partial-html/_dash-header.html')
     @@include('../partial-html/_inner-hero.html', {
         pageTitle: 'User Dashboard',
         activePage: 'Dashboard'
     })
 
     <!-- Dashboard Section Starts Here -->
-    <div class="dashboard-section">
+    <div class="dashboard-section padding-top">
         <div class="container">
-            
+            <div class="row justify-content-center g-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$3750</h2>
+                            <p class="info">TOTAL BALANCE</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-wallet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$4550</h2>
+                            <p class="info">TOTAL DEPOSIT</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-wallet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$2500</h2>
+                            <p class="info">TOTAL WITHDRAW</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-money-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$2500</h2>
+                            <p class="info">TOTAL TRANSECTIONS</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-money-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Dashboard Section Ends Here -->
+
+
+    <!-- Game Section Starts Here -->
+    <section class="game-section pt-5 padding-bottom">
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item2.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Roulette</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item1.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Zero To Ninty</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item3.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Number Buy</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item4.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Roulette</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Game Section Ends Here -->
 
 
     @@include('../partial-html/_footer.html')

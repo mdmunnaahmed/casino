@@ -1,0 +1,40 @@
+    <!-- meta tags and other links -->
+    @@include('../partial-html/_template-top.html')
+    @@include('../partial-html/_dash-header.html')
+    @@include('../partial-html/_inner-hero.html', {
+        pageTitle: 'Commission Log',
+        activePage: 'Commission Log'
+    })
+
+
+    <!-- Game Log Section Starts Here -->
+    <div class="padding-top padding-bottom">
+        <div class="container">
+            <div class="table--responsive--lg">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Commission From</th>
+                            <th>Commission Level</th>
+                            <th>Amount</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Commission From">@testuser123</td>
+                            <td data-label="Commission Level">Level 3</td>
+                            <td data-label="Amount">$500</td>
+                            <td data-label="Title">about the referral commission</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Game Log Section Ends Here -->
+
+    @@include('../partial-html/_footer.html')
+    @@include('../partial-html/_template-bottom.html')
+</body>
+</html>

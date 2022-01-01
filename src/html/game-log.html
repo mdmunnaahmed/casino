@@ -1,0 +1,49 @@
+    <!-- meta tags and other links -->
+    @@include('../partial-html/_template-top.html')
+    @@include('../partial-html/_dash-header.html')
+    @@include('../partial-html/_inner-hero.html', {
+        pageTitle: 'Game Log',
+        activePage: 'Game Log'
+    })
+
+
+    <!-- Game Log Section Starts Here -->
+    <div class="padding-top padding-bottom">
+        <div class="container">
+            <div class="table--responsive--lg">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Game Name</th>
+                            <th>Your Select</th>
+                            <th>Invest</th>
+                            <th>Date</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Game Name">Zero To Ninty</td>
+                            <td data-label="Your Select">60</td>
+                            <td data-label="Invest">$500</td>
+                            <td data-label="Date">12 Mar, 21</td>
+                            <td data-label="Result"><span class="badge border border-success text--success badge--cap">Win</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Game Name">Dice Rolling</td>
+                            <td data-label="Your Select">6</td>
+                            <td data-label="Invest">$300</td>
+                            <td data-label="Date">10 Mar, 21</td>
+                            <td data-label="Result"><span class="badge border border-danger text--danger badge--cap">Lose</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Game Log Section Ends Here -->
+
+    @@include('../partial-html/_footer.html')
+    @@include('../partial-html/_template-bottom.html')
+</body>
+</html>

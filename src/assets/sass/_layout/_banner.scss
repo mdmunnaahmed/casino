@@ -108,17 +108,17 @@
 
 // Inner Banner
 .inner-banner {
-    padding: 180px 0 110px;
+    padding: 150px 0 110px;
     position: relative;
     @include breakpoint(max-xl) {
-        padding-top: 170px;
+        padding-top: 140px;
     }
     @include breakpoint(max-lg) {
-        padding-top: 140px;
+        padding-top: 120px;
         padding-bottom: 80px;
     }
     @include breakpoint(max-sm) {
-        padding-top: 120px;
+        padding-top: 80px;
         padding-bottom: 70px;
     }
     &::before {
@@ -131,7 +131,8 @@
 
 .breadcrumbs {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 300;
     li {
         padding: 3px 10px;
         a {
@@ -140,7 +141,7 @@
             &::before {
                 @include font-ico;
                 content: '\f30b';
-                font-size: 20px;
+                font-size: 18px;
                 right: 0;
                 top: 2px;
                 color: $white;

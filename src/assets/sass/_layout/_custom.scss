@@ -1,39 +1,40 @@
-
-.table {
-    margin: 0;
-    border: none;
-    width: 100%;
-    border-collapse: collapse;
-    thead {
-        tr {
-            background: rgba($base-color,1);
-            th {
-                padding: 10px 15px;
-                font-family: $heading;
-                color: $white;
-                border: none;
-                font-size: 15px;
-                font-weight: 500;
-                border: 1px solid $border-color;
-            }
+.table--responsive--md {
+    @include breakpoint(max-md) {
+        thead {
+            display: none;
         }
-    }
-    tbody {
-        tr {
-            &:nth-child(odd) {
-                background: $section-bg;
-            }
-            td {
-                color: $body-color;
-                vertical-align: middle;
-                padding: 10px 15px;
-                border-width: 1px;
-                @include breakpoint(lg) {
-                    border-color: $border-color;
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px !important;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        font-family: $heading;
+                        font-size: 16px;
+                        color: $title-color;
+                        font-weight: 500;
+                        @include breakpoint(max-sm) {
+                            font-size: 15px;
+                        }
+                    }
                 }
             }
         }
     }
+}
+.table--responsive--lg {
     @include breakpoint(max-lg) {
         thead {
             display: none;
@@ -48,16 +49,96 @@
                     padding: 10px 15px;
                     border: none;
                     border-bottom: 1px solid $border-color;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px !important;
+                    }
                     &:last-child {
                         border: none;
                     }
                     &::before {
                         content: attr(data-label);
                         font-family: $heading;
-                        font-size: 15px;
+                        font-size: 16px;
                         color: $title-color;
                         font-weight: 500;
+                        @include breakpoint(max-sm) {
+                            font-size: 15px;
+                        }
                     }
+                }
+            }
+        }
+    }
+}
+.table--responsive--xl {
+    @include breakpoint(max-xl) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px !important;
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        font-family: $heading;
+                        font-size: 16px;
+                        color: $title-color;
+                        font-weight: 500;
+                        @include breakpoint(max-sm) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table {
+    margin: 0;
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+        tr {
+            // background: rgba($base-color,1);
+            th {
+                padding: 10px 15px;
+                font-family: $heading;
+                color: $white;
+                border: none;
+                font-size: 15px;
+                font-weight: 500;
+                border: 1px solid $border-color;
+            }
+        }
+    }
+    tbody {
+        font-size: 15px;
+        tr {
+            &:nth-child(odd) {
+                background: $section-bg;
+            }
+            td {
+                color: $white;
+                vertical-align: middle;
+                padding: 10px 15px;
+                border-width: 1px;
+                @include breakpoint(lg) {
+                    border-color: $border-color;
                 }
             }
         }
@@ -68,7 +149,7 @@
 .custom--card {
     border: 1px solid $border-color;
     border-radius: 5px;
-    background: $white;
+    background: $body-bg;
 }
 
 .custom--card .card--header,
@@ -149,9 +230,8 @@
 }
 
 .badge {
-    background: $base-color;
-    padding: 5px 12px !important;
-    color: $white !important;
+    padding: 5px 12px;
+    color: $white;
     border-radius: 5px;
     font-size: 14px;
     line-height: 1;
@@ -160,15 +240,15 @@
         color: $white;
     }
     &.badge--sm {
-        padding: 3px 10px !important;
+        padding: 3px 10px;
         font-size: 12px;
     }
     &.badge--xs {
-        padding: 2px 8px !important;
+        padding: 2px 8px;
         font-size: 11px;
     }
     &.badge--lg {
-        padding: 7px 15px !important;
+        padding: 7px 15px;
         font-size: 15px;
     }
     &.badge--cap {
@@ -180,18 +260,18 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        padding: 7px !important;
+        padding: 7px;
         line-height: 0.75;
         font-size: 14px;
         font-weight: 500;
     }
 }
 
-
-
 .custom--modal .modal-footer,
-  .custom--modal .modal-header {
-    border-color: $section-bg;
+.custom--modal .modal-body,
+.custom--modal .modal-header {
+    border-color: $border-color;
+    background: $section-bg;
 }
 
 .custom--modal .modal-footer .modal-title,

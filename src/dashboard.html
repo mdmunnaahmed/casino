@@ -24,61 +24,62 @@
 
         <div class="overlay"></div>
 
-    <div class="header">
+    <div class="header-two">
     <div class="container">
         <div class="header-bottom">
             <div class="header-bottom-area align-items-center">
-                <div class="logo"><a href="index.html"><img src="./assets/images/logo2.png" alt="logo"></a></div>
+                <div class="logo"><a href="index.html"><img src="./assets/images/logo.png" alt="logo"></a></div>
                 <ul class="menu">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="dashboard.html">Dashboard</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="games.html">Games <span class="badge badge--sm">NEW</span></a>
-                    </li>
-                    <li>
-                        <a href="faq.html">Faq</a>
-                    </li>
-                    <li>
-                        <a href="#0">Pages</a>
+                        <a href="#0">Withdraw</a>
                         <ul class="sub-menu">
-                            <li>
-                                <a href="dashboard.html">User Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="policy.html">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="terms-conditions.html">Terms & Conditions</a>
-                            </li>
-                            <li>
-                                <a href="sign-in.html">Sign In</a>
-                            </li>
-                            <li>
-                                <a href="sign-up.html">Sign Up</a>
-                            </li>
+                            <li><a href="withdraw.html">Withdraw</a></li>
+                            <li><a href="withdraw-log.html">Withdraw Log</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#0">Blog</a>
+                        <a href="#0">Deposit</a>
                         <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
+                            <li><a href="deposit.html">Deposit</a></li>
+                            <li><a href="deposit-log.html">Deposit Log</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="referral.html">referral</a>
+                    </li>
+                    <li>
+                        <a href="#0">reports</a>
+                        <ul class="sub-menu">
+                            <li><a href="game-log.html">game log</a></li>
+                            <li><a href="commission-log.html">commission</a></li>
+                            <li><a href="transection.html">transections</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#0">support</a>
+                        <ul class="sub-menu">
+                            <li><a href="create-ticket.html">Create Ticket</a></li>
+                            <li><a href="create-ticket.html">My Tickets</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#0">Account</a>
+                        <ul class="sub-menu">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="change-pass.html">Change Password</a></li>
+                            <li><a href="change-pass.html">2FA Security</a></li>
+                            <li><a href="change-pass.html">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
-                <div class="header-trigger-wrapper d-flex d-lg-none align-items-center">
-                    <div class="header-trigger me-4">
+                <div class="header-trigger-wrapper d-flex align-items-center d-lg-none">
+                    <div class="header-trigger me-4 d-xl-none">
                         <span></span>
                     </div>
                 </div>
-                <a href="sign-in.html" class="cmn--btn active btn--md d-none d-sm-block">Sign In</a>
             </div>
         </div>
     </div>
@@ -87,7 +88,7 @@
 <section class="inner-banner bg_img" style="background: url('assets/images/inner-banner/bg2.jpg') top;">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-6 text-center">
+      <div class="col-lg-7 col-xl-6 text-center">
         <h2 class="title text-white">User Dashboard</h2>
         <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
           <li><a href="index.html">Home</a></li>
@@ -100,12 +101,135 @@
 <!-- inner hero section end -->
 
     <!-- Dashboard Section Starts Here -->
-    <div class="dashboard-section">
+    <div class="dashboard-section padding-top">
         <div class="container">
-            
+            <div class="row justify-content-center g-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$3750</h2>
+                            <p class="info">TOTAL BALANCE</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-wallet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$4550</h2>
+                            <p class="info">TOTAL DEPOSIT</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-wallet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$2500</h2>
+                            <p class="info">TOTAL WITHDRAW</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-money-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+                    <div class="dashboard__card">
+                        <div class="dashboard__card-content">
+                            <h2 class="price">$2500</h2>
+                            <p class="info">TOTAL TRANSECTIONS</p>
+                            <a href="#0" class="view-btn">View All</a>
+                        </div>
+                        <div class="dashboard__card-icon">
+                            <i class="las la-money-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Dashboard Section Ends Here -->
+
+
+    <!-- Game Section Starts Here -->
+    <section class="game-section pt-5 padding-bottom">
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item2.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Roulette</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item1.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Zero To Ninty</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item3.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Number Buy</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6">
+                    <div class="game-item">
+                        <div class="game-inner">
+                            <div class="game-item__thumb">
+                                <img src="../assets/images/game/item4.png" alt="game">
+                            </div>
+                            <div class="game-item__content">
+                                <h4 class="title">Roulette</h4>
+                                <p class="invest-info">Invest Limit</p>
+                                <p class="invest-amount">$10.49 - $1,000</p>
+                                <a href="#0" class="cmn--btn active btn--md radius-0">Play Now</a>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Game Section Ends Here -->
 
 
     <!-- Footer Section Starts Here -->

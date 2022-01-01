@@ -1,0 +1,198 @@
+.dashboard__card {
+    background: $body-bg;
+    padding: 30px;
+    border-radius: 10px;
+    @extend %flex;
+    justify-content: space-between;
+    position: relative;
+    @extend %shadow;
+    @include transition;
+    &:hover {
+        @extend %shadow2;
+
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        top: -2px;
+        background: $gradient-base;
+        border-radius: 10px;
+        z-index: -1;
+        opacity: .8;
+    }
+    @include breakpoint(max-xxl) {
+        @include breakpoint(xl) {
+            padding: 25px;
+        }
+    }
+    &-content {
+        .price {
+            font-family: $body;
+            font-size: 36px;
+            color: $white;
+            @include breakpoint(max-xxl) {
+                font-size: 32px;
+            }
+        }
+        .info {
+            color: $white;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.1;
+            @include breakpoint(max-xxl) {
+                @include breakpoint(xl) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    &-icon {
+        color: $white;
+        background: $gradient-base;
+        font-size: 36px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        @extend %flex-center;
+        // text-shadow: 2px 3px 5px;
+        @include breakpoint(max-xxl) {
+            @include breakpoint(lg) {
+                width: 65px;
+                height:65px;
+                font-size: 24px;
+            }
+            @include breakpoint(max-xs) {
+                width: 65px;
+                height:65px;
+                font-size: 24px;
+            }
+        }
+    }
+    .view-btn {
+        margin-top: 17px;
+        padding: 2px 12px;
+        border-radius: 5px;
+        color: $dark;
+        background: $gradient-base;
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+// Method Card
+.method-card {
+    padding: 15px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    background: $section-bg;
+}
+.method-card-info {
+    font-size: 14px;
+    margin: 0;
+    li {
+        padding: 5px 0;
+    }
+
+}
+
+.deposit-group{
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 15px;
+    border-bottom: 1px solid $border-color;
+    .title {
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
+
+.custom--card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+// Profile Setting
+.profile__thumb__edit {
+    border: 1px solid $border-color;
+    box-shadow: 0 2px 15px rgba($dark,.1);
+    padding: 35px;
+    max-width: 450px;
+    margin: 0 auto;
+    @include breakpoint(max-xs) {
+        padding: 25px 15px;
+    }
+    @include breakpoint(xxl) {
+        margin-right: 15px;
+    }
+    .thumb {
+        max-width: 300px;
+        width: 100%;
+        height: 260px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.profile__content__edit {
+    padding: 30px;
+    box-shadow: 0 0 15px rgba($dark,.1);
+    @include breakpoint(max-xs) {
+        padding: 20px 15px;
+    }
+    .input-group {
+        .form-label {
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .form--control {
+            padding: 0 15px;
+            width: 100%;
+            border-color: $border-color;
+            &:focus {
+                border-color: rgba($base-color,.7);
+            }
+        }
+    }
+
+}
+.copybtn {
+    font-size: 20px !important;
+    padding: 0 18px !important;
+    line-height: 45px;
+}
+
+
+
+
+// Create Ticket 
+.create__ticket {
+    background: $section-bg;
+    border-radius: 10px;
+}
+.create__ticket__form {
+    .form--group {
+        margin-bottom: 20px;
+    }
+}
+input[type=file] {
+    line-height: 25px;
+    padding: 12px 25px;
+}
+
+
+// Ticket Box
+.ticket-box {
+    background: $section-bg;
+    border-radius: 10px;
+}

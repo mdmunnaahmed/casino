@@ -1,0 +1,45 @@
+    <!-- meta tags and other links -->
+    @@include('../partial-html/_template-top.html')
+    @@include('../partial-html/_dash-header.html')
+    @@include('../partial-html/_inner-hero.html', {
+        pageTitle: 'Referral',
+        activePage: 'Referral'
+    })
+
+    <section class="padding-top padding-bottom">
+        <div class="container">
+            <div class="row pb-4">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text"  value="https://script.viserlab.com/abcd?reference=usernamea" class="form-control form--control text-white" id="referralURL" readonly>
+                            <span class="input-group-text copytext text-dark bg--base px-4 fw-bold" id="copyBoard" >Copy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <td class="text-muted text-center" colspan="100%">No referral user!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @@include('../partial-html/_footer.html')
+    @@include('../partial-html/_template-bottom.html')
+</body>
+</html>

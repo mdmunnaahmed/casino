@@ -40,18 +40,6 @@
 
 
 // Game Section Starts Here
-.game-section {
-    position: relative;
-    &::before {
-        @include before-set;
-        background: $section-bg;
-        opacity: .9;
-    }
-    .container {
-        position: relative;
-        z-index: 1;
-    }
-}
 .game-item {
     text-align: center;
     padding: 35px 40px;
@@ -826,3 +814,199 @@ div[class*='col'] {
     }
 }
 // Privacy Policy Section Ends Here
+
+
+.game-details-left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: $section-bg;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    min-height: 100%;
+}
+
+.game-details-right {
+    padding: 50px;
+    background-color: $white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+@media (max-width: 575px) {
+    .game-details-right {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .game-details-right {
+        padding: 30px 15px;
+    }
+}
+
+.amount-field {
+    border-right: none !important;
+}
+
+.amount-field:focus {
+    background-color: #0A0629;
+}
+
+.amount-field ~ .input-group-append .input-group-text {
+    background-color: #ed1569;
+    border: 1px solid #ed1569;
+}
+
+.single-select {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+.single-select.active {
+    position: relative;
+    border-color: #e6a25d;
+}
+
+.single-select.active img {
+    opacity: 0.35;
+}
+
+.single-select.active::after {
+    position: absolute;
+    content: "\f00c";
+    top: -8px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background-color: #0aaf32;
+    color: #ffffff;
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@media (max-width: 440px) {
+    .single-select.active::after {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+}
+
+.single-select.dice {
+    width: calc(100% / 6);
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .single-select.dice {
+        padding: 15px;
+        width: calc(100% / 3);
+    }
+}
+
+@media (max-width: 991px) {
+    .single-select.dice {
+        width: calc(100% / 6);
+    }
+}
+
+@media (max-width: 575px) {
+    .single-select.dice {
+        width: calc(100% / 3);
+    }
+}
+
+.single-select.pool {
+    padding: 15px;
+    width: calc(100% / 4);
+}
+
+@media (max-width: 991px) {
+    .single-select.pool {
+        width: calc(100% / 8);
+    }
+}
+
+@media (max-width: 767px) {
+    .single-select.pool {
+        width: calc(100% / 4);
+    }
+}
+
+.coins-wrapper {
+    position: relative;
+    transform-style: preserve-3d;
+    @include transition;
+    width: 300px;
+    height: 300px;
+    animation: coin-rotate 2s linear infinite;
+    &:hover {
+        transform: rotateY(180deg);
+    }
+    .front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes coin-rotate {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* game details css end */
+
+.form--select {
+    color: #fff;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background: header-bg;
+}
+.form--select option {
+    color: $dark;
+    background: $white;
+}
+.form--select:focus {
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+}
