@@ -8,60 +8,65 @@
 
     <section class="padding-top padding-bottom">
         <div class="container">
-            <div class="row">
+            <div class="row gy-5">
                 <div class="col-lg-6">
-                    <div class="card-body h-100 middle-el">
-                        <div class="game-details-left">
-                            <div id="coin-flip-cont">
-                                <div class="coins-wrapper">
-                                    <div class="front"><img src="https://script.viserlab.com/xaxino/assets/templates/basic/images/play/head.png" alt=""></div>
-                                    <div class="back"><img src="https://script.viserlab.com/xaxino/assets/templates/basic/images/play/tail.png" alt=""></div>
-                                </div>
+                    <div class="game-details-left">
+                        <div id="coin-flip-cont">
+                            <div class="coins-wrapper">
+                                <div class="front"><img src="assets/images/game/head.png" alt="game"></div>
+                                <div class="back"><img src="assets/images/game/tail.png" alt="game"></div>
                             </div>
                         </div>
                         <div class="cd-ft"></div>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-lg-0 mt-5">
+                <div class="col-lg-6">
                     <div class="game-details-right">
-                        <form method="post" id="game" novalidate="novalidate">
-                            <input type="hidden" name="_token" value="x8Ih1jaB80xdAq8yjL1A398E7s8ZooLn3joH2MrY">
-                            <h3 class="mb-4 text-center f-size--28">Current Balance : <span class="base--color"><span class="bal">100</span> USD</span></h3>
+                        <form id="game" novalidate="novalidate">
+                            <h3 class="mb-4 text-center">Current Balance : <span class="base--color"><span class="bal">100</span> USD</span></h3>
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="invest" class="form-control amount-field" placeholder="Enter amount">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-addon2">USD</span>
-                                    </div>
+                                    <input type="text" name="invest" class="form-control form--control amount-field" placeholder="Enter amount">
+                                    <span class="input-group-text text-white bg--base" id="basic-addon2">USD</span>
                                 </div>
                                 <small class="form-text text-muted"><i class="fas fa-info-circle mr-2"></i>Minimum: 1 USD | Maximum: 500.00 USD | <span class="text-warning">Win Amount  1  %</span></small>
                             </div>
-                            <div class="form-group mt-5 justify-content-center d-flex">
+                            <div class="form-group mt-4 mt-sm-5 justify-content-center d-flex flex-wrap justify-content-between">
                                 <div class="single-select head gmimg active">
-                                    <img src="https://script.viserlab.com/xaxino/assets/templates/basic//images/play/head.png" alt="game-image">
+                                    <img src="assets/images/game/head.png" alt="game-image">
                                 </div>
                                 <div class="single-select tail gmimg">
-                                    <img src="https://script.viserlab.com/xaxino/assets/templates/basic//images/play/tail.png" alt="game-image">
+                                    <img src="assets/images/game/tail.png" alt="game-image">
                                 </div>
-                                <input type="hidden" name="choose" value="head">
                             </div>
                             <div class="mt-5 text-center">
-                                <button type="submit" id="flip" class="cmn-btn w-100 text-center">Play Now</button>
-                                <a data-toggle="modal" data-target="#exampleModalCenter" class="mt-1 btn btn-link">Game Instruction <i class="las la-info-circle"></i></a>
+                                <button type="submit" class="cmn--btn active w-100 text-center">Play Now</button>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModalCenter" class="mt-3 btn btn-link btn--sm radius-5">Game Instruction <i class="las la-info-circle"></i></a>
                             </div>
-                            <select name="" id="" class="form-select form--select">
-                                <option value="">012</option>
-                                <option value="">012</option>
-                                <option value="">012</option>
-                                <option value="">012</option>
-                                <option value="">012</option>
-                            </select>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <div class=" modal custom--modal fade show" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"  aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content section-bg border-0">
+                <div class="modal-header modal--header bg--base">
+                    <h4 class="modal-title text-dark" id="exampleModalLongTitle">Game Rules</h4>
+                </div>
+                <div class="modal-body modal--body">
+                    <h3 class="title mb-2">Before Game Start: </h3>
+                    <p>Officia quod velit eaque tempore assumenda, blanditiis corporis praesentium voluptate provident. Sunt enim obcaecati odio doloremque molestiae aspernatur fuga eveniet molestias autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam sapiente aut est nostrum, labore quibusdam aliquid repellendus dignissimos consequuntur aspernatur voluptates consectetur aliquam quam nesciunt impedit? Vitae blanditiis vero officiis quidem ipsum esse! Praesentium, laudantium numquam! Corporis sed adipisci, incidunt aut, accusamus sit, nihil tenetur ipsam quaerat optio nisi?</p>
+                </div>
+                <div class="modal-footer modal--footer">
+                    <button type="button" class="btn btn--danger btn--md" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     @@include('../partial-html/_footer.html')

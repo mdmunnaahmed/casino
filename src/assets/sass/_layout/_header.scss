@@ -24,6 +24,10 @@
     top: 0;
     width: 100%;
     z-index: 11;
+    @include transition;
+    &.sticky {
+        background: $section-bg;
+    }
 }
 .header-bottom {
     width: 100%;
@@ -61,6 +65,7 @@
     @extend %flex;
     align-items: center;
     margin: 0;
+    position: relative;
     >.has-sub-menu {
         margin-right: 20px;
         @include breakpoint(max-xl) {
@@ -105,7 +110,7 @@
         a {
             display: block;
             padding: 4px 15px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             text-transform: uppercase;
             font-family: $heading;
@@ -135,6 +140,11 @@
             }
         }
     }
+    .btn-close {
+        position: absolute;
+        right:20px;
+        top:  20px;
+    }
 }
 @include breakpoint(max-xxl) {
     .menu {
@@ -162,23 +172,26 @@
     .sub-menu {
         position: absolute;
         top: 100%;
-        left: 0px;
+        right: 0px;
         opacity: 0;
         visibility: hidden;
-        min-width: 220px;
+        min-width: 230px;
         @include transition;
         transform: translateY(15px);
         box-shadow: 0 3px 12px 3px rgba($primary-color,.1);
         overflow: hidden;
         z-index: 11;
-        background: $white;
+        background: $body-bg;
+        border: 2px solid rgba($base-color,.4);
+        padding: 10px;
         li {
             padding: 0;
             &:last-child {
                 border: none
             }
             a {
-                color: $dark;
+                font-size: 14px;
+                color: $white;
                 padding: 7px 15px;
                 display: block;
                 @include text-wrap;
@@ -186,6 +199,7 @@
                 &:hover {
                     padding-left: 20px;
                     background: $base-color;
+                    color: $dark;
                 }
             }
         }
@@ -225,7 +239,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        padding: 50px 30px 25px;
+        padding: 50px 30px 50px;
         max-height: calc(100vh - 50px);
         min-width: 200px;
         width: 100%;;
@@ -296,7 +310,6 @@
     cursor: pointer;
     margin-top: -10px;
     &.active {
-        z-index: 9999;
         span {
             background: none !important;
             &::before {

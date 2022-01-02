@@ -24,7 +24,7 @@
 
         <div class="overlay"></div>
 
-    <div class="header-two">
+    <div class="header">
     <div class="container">
         <div class="header-bottom">
             <div class="header-bottom-area align-items-center">
@@ -62,7 +62,7 @@
                         <a href="#0">support</a>
                         <ul class="sub-menu">
                             <li><a href="create-ticket.html">Create Ticket</a></li>
-                            <li><a href="create-ticket.html">My Tickets</a></li>
+                            <li><a href="my-tickets.html">My Tickets</a></li>
                         </ul>
                     </li>
                     <li>
@@ -70,10 +70,11 @@
                         <ul class="sub-menu">
                             <li><a href="profile.html">Profile</a></li>
                             <li><a href="change-pass.html">Change Password</a></li>
-                            <li><a href="change-pass.html">2FA Security</a></li>
-                            <li><a href="change-pass.html">Logout</a></li>
+                            <li><a href="2fa.html">2FA Security</a></li>
+                            <li><a href="#0">Logout</a></li>
                         </ul>
                     </li>
+                    <button class="btn-close btn-close-white d-lg-none"></button>
                 </ul>
                 <div class="header-trigger-wrapper d-flex align-items-center d-lg-none">
                     <div class="header-trigger me-4 d-xl-none">
@@ -101,48 +102,46 @@
 <!-- inner hero section end -->
 
     <!-- Ticket Section Starts Here -->
-    <div class="padding-top padding-bottom">
+    <div class="padding-top padding-bottom section-bg">
         <div class="container">
-            <div class="pb-80">
-                <div class="ticket-box card custom--card card--lg">
-                    <div class="ticket-body card--body">
-                        <div class="create-header d-flex flex-wrap align-items-center justify-content-between mb-4">
-                            <h4 class="title mb-2">Create New Ticket</h4>
-                            <a href="#0" class="cmn--btn btn--sm active">All Messages</a>
-                        </div>
-                        <form class="ticket-form row gy-3">
-                            <div class="form--group col-sm-6">
-                                <label for="fname" class="form-label">Your Name <span class="text--danger">*</span></label>
-                                <input type="text" id="fname" class="form-control form--control">
-                            </div>
-                            <div class="form--group col-sm-6">
-                                <label for="username" class="form-label">Your Username <span class="text--danger">*</span></label>
-                                <input type="text" id="username" class="form-control form--control">
-                            </div>
-                            <div class="form--group col-sm-12">
-                                <label for="subject" class="form-label">Your Subject <span class="text--danger">*</span></label>
-                                <input type="text" id="subject" class="form-control form--control">
-                            </div>
-                            <div class="form--group col-sm-12">
-                                <label for="message" class="form-label">Your Message <span class="text--danger">*</span></label>
-                                <textarea id="message" class="form-control form--control"></textarea>
-                            </div>
-                            <div class="form--group col-sm-12">
-                                <label class="form-label">Attachments</label>
-                                <div class="form-group d-flex mb-2">
-                                    <input type="file" class="form-control form--control" name="file" id="file2">
-                                    <button class="ms-3 cmn--btn active text-white h-50 border-0" type="button"><i class="fas fa-plus"></i></button>
-                                </div>
-                                <span class="info fs-sm">Allowed File Extensions: .jpg, .jpeg, .png, .pdf, .doc, .docx</span>
-                            </div>
-                            <div class="form--group col-sm-12 mb-0">
-                                <button class="mt-sm-2 cmn--btn active" type="submit">Create Ticket</button>
-                            </div>
-                        </form> 
+            <div class="ticket-box custom--card card--lg mb-5">
+                <div class="ticket-body card--body">
+                    <div class="create-header d-flex flex-wrap align-items-center justify-content-between mb-4">
+                        <h4 class="title mb-2">Create New Ticket</h4>
+                        <a href="#0" class="cmn--btn btn--sm active">All Messages</a>
                     </div>
+                    <form class="ticket-form row gy-3">
+                        <div class="form--group col-sm-6">
+                            <label for="fname" class="form-label">Your Name <span class="text--danger">*</span></label>
+                            <input type="text" id="fname" class="form-control form--control style-two">
+                        </div>
+                        <div class="form--group col-sm-6">
+                            <label for="username" class="form-label">Your Username <span class="text--danger">*</span></label>
+                            <input type="text" id="username" class="form-control form--control style-two">
+                        </div>
+                        <div class="form--group col-sm-12">
+                            <label for="subject" class="form-label">Your Subject <span class="text--danger">*</span></label>
+                            <input type="text" id="subject" class="form-control form--control style-two">
+                        </div>
+                        <div class="form--group col-sm-12">
+                            <label for="message" class="form-label">Your Message <span class="text--danger">*</span></label>
+                            <textarea id="message" class="form-control form--control style-two"></textarea>
+                        </div>
+                        <div class="form--group col-sm-12">
+                            <label class="form-label">Attachments</label>
+                            <div class="form-group d-flex mb-2">
+                                <input type="file" class="form-control form--control style-two" name="file" id="file1">
+                                <button class="ms-3 cmn--btn active text-white h-50 border-0" type="button"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <span class="info fs-sm">Allowed File Extensions: .jpg, .jpeg, .png, .pdf, .doc, .docx</span>
+                        </div>
+                        <div class="form--group col-sm-12 mb-0">
+                            <button class="mt-sm-2 cmn--btn active" type="submit">Create Ticket</button>
+                        </div>
+                    </form> 
                 </div>
             </div>
-            <div class="ticket-box card custom--card">
+            <div class="ticket-box custom--card card--lg mb-5">
                 <div class="card--body">
                     <div class="ticket-header d-flex flex-wrap align-items-center justify-content-between mb-4">
                         <h5 class="title">Ticket Id : <span class="text--base">#049503892dkg</span></h5>
@@ -151,20 +150,90 @@
                     <div class="ticket-body">
                         <form class="ticket-form row gy-3">
                             <div class="form--group col-sm-12">
-                                <textarea class="form-control form--control"></textarea>
+                                <textarea class="form-control form--control style-two"></textarea>
                             </div>
                             <div class="form--group col-sm-12">
                                 <label class="form--label">Attachments</label>
                                 <div class="form-group d-flex mb-2">
-                                    <input type="file" class="form-control form--control" name="file" id="file2">
-                                    <button class="ms-3 btn btn--base h-50 border-0" type="button"><i class="fas fa-plus"></i></button>
+                                    <input type="file" class="form-control form--control style-two" name="file" id="file2">
+                                    <button class="ms-3 cmn--btn active text-white h-50 border-0" type="button"><i class="fas fa-plus"></i></button>
                                 </div>
                                 <span class="info fs-sm">Allowed File Extensions: .jpg, .jpeg, .png, .pdf, .doc, .docx</span>
                             </div>
                             <div class="form--group col-sm-12 pt-sm-2 mb-0">
-                                <button type="submit" class="btn btn--base">Send Message</button>
+                                <button type="submit" class="cmn--btn active">Send Message</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="ticket-box custom--card card--lg">
+                <div class="card--header d-flex flex-wrap justify-content-between align-items-center">
+                    <h6 class="card-title mt-0">
+                        <span class="badge badge--success py-2 px-3">Open</span>
+                        [Ticket#H912NV9]
+                    </h6>
+                    <button class="btn btn--danger" type="button" data-bs-toggle="modal" data-bs-target="#DelModal"><i class="fa fa-lg fa-times-circle"></i></button>
+                </div>
+                <div class="card--body">
+                    <div class="custom--card">
+                        <div class="card--body">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                                <a class="btn-link text--base" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fa fa-pencil-alt"></i>
+                                    Reply
+                                </a>
+                                <a class=" btn-link text--base" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
+                            <form>
+                                <div class="row justify-content-between">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control form--control" placeholder="Your Reply"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-between mt-4">
+                                    <div class="col-md-10">
+                                        <div class="form-group d-flex mb-2">
+                                            <input type="file" class="form-control form--control style-two">
+                                            <button class="ms-3 btn btn--danger text-white h-50 border-0" type="button"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-end">
+                                        <button type="submit" class="btn text-white">
+                                            <i class="fa fa-reply"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row border border-warning mt-5 my-3 py-3 mx-0">
+                        <div class="col-md-3 border-right text-right">
+                            <h5 class="my-3">Testuser</h5>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="fs-sm text-muted">Sent on Saturday 16 May at 12:25:45</p>
+                            <p class="my-3 text-white">Cum culpa dolor numquam quo, corporis et veritatis ipsum maxime ipsa hic obcaecati commodi repudiandae nisi totam, reiciendis repellat. Vitae, laboriosam sint?</p>
+                            <div class="mt-2">
+                                <a href="#0" class="me-3 text--base"><i class="fa fa-file"></i> Attachment 1</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border border-primary my-3 py-3 mx-0">
+                        <div class="col-md-3 border-right text-right">
+                            <h5 class="my-3">Admin</h5>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="fs-sm text-muted">Sent on Saturday 16 May at 12:25:45</p>
+                            <p class="my-3 text-white">Cum culpa dolor numquam quo, corporis et veritatis ipsum maxime ipsa hic obcaecati commodi repudiandae nisi totam, reiciendis repellat. Vitae, laboriosam sint?</p>
+                            <div class="mt-2">
+                                <a href="#0" class="me-3 text--base"><i class="fa fa-file"></i> Attachment 1</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,9 +249,9 @@
             <div class="footer-wrapper d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
                 <div class="logo mb-3 mb-md-0"><a href="index.html"><img src="assets/images/logo.png" alt="logo"></a></div>
                 <ul class="footer-links d-flex flex-wrap justify-content-center">
-                    <li><a href="#0">Games</a></li>
-                    <li><a href="#0">Terms & Conditions</a></li>
-                    <li><a href="#0">Privacy Policy</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="policy.html">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>

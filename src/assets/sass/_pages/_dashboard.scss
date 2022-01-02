@@ -118,9 +118,6 @@
 
 // Profile Setting
 .profile__thumb__edit {
-    border: 1px solid $border-color;
-    box-shadow: 0 2px 15px rgba($dark,.1);
-    padding: 35px;
     max-width: 450px;
     margin: 0 auto;
     @include breakpoint(max-xs) {
@@ -132,7 +129,7 @@
     .thumb {
         max-width: 300px;
         width: 100%;
-        height: 260px;
+        height: 320px;
         margin: 0 auto;
         border-radius: 15px;
         overflow: hidden;
@@ -144,28 +141,7 @@
         }
     }
 }
-.profile__content__edit {
-    padding: 30px;
-    box-shadow: 0 0 15px rgba($dark,.1);
-    @include breakpoint(max-xs) {
-        padding: 20px 15px;
-    }
-    .input-group {
-        .form-label {
-            font-size: 13px;
-            font-weight: 500;
-        }
-        .form--control {
-            padding: 0 15px;
-            width: 100%;
-            border-color: $border-color;
-            &:focus {
-                border-color: rgba($base-color,.7);
-            }
-        }
-    }
 
-}
 .copybtn {
     font-size: 20px !important;
     padding: 0 18px !important;
@@ -173,26 +149,27 @@
 }
 
 
-
-
 // Create Ticket 
-.create__ticket {
-    background: $section-bg;
+.ticket-box {
+    background: $body-bg;
     border-radius: 10px;
-}
-.create__ticket__form {
-    .form--group {
-        margin-bottom: 20px;
+    @include breakpoint(max-lg) {
+        .btn, .cmn--btn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
     }
 }
-input[type=file] {
-    line-height: 25px;
-    padding: 12px 25px;
-}
 
-
-// Ticket Box
-.ticket-box {
-    background: $section-bg;
-    border-radius: 10px;
+.reset-header {
+    .icon {
+        width: 75px;
+        height: 75px;
+        margin: 0 auto 15px;
+        background: $gradient-base;
+        @extend %flex-center;
+        font-size: 30px;
+        border-radius: 50%;
+        color: $dark;
+    }
 }

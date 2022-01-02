@@ -90,86 +90,72 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7 col-xl-6 text-center">
-        <h2 class="title text-white">Withdraw Logs</h2>
+        <h2 class="title text-white">My Tickets</h2>
         <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
           <li><a href="index.html">Home</a></li>
-          <li>Withdraw Log</li>
+          <li>My Tickets</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 <!-- inner hero section end -->
-    
-    <!-- Transection Section Starts Here -->
-    <section class="transection-section padding-top padding-bottom">
+
+    <!-- My Ticket Section Starts Here -->
+    <div class="my-ticket padding-top padding-bottom">
         <div class="container">
             <div class="table--responsive--lg">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Transection ID</th>
-                            <th>User Name</th>
-                            <th>Date</th>
-                            <th>Amount</th>
+                            <th>Ticket ID/Subject</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th>Last Reply</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="trx-id" data-label="Transection ID">#481XV93NCKD0</td>
-                            <td class="username" data-label="User Name">jubayerarun</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$150.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#V93N481XCKD0</td>
-                            <td class="username" data-label="User Name">tanvira65</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$500.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#1XCKD0V93N48</td>
-                            <td class="username" data-label="User Name">adirarah99</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$350.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#V981XCKD03N4</td>
-                            <td class="username" data-label="User Name">munnaahmed</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$250.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#481XV93NCKD0</td>
-                            <td class="username" data-label="User Name">jubayerarun</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$150.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#V93N481XCKD0</td>
-                            <td class="username" data-label="User Name">tanvira65</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$500.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#1XCKD0V93N48</td>
-                            <td class="username" data-label="User Name">adirarah99</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$350.50</td>
-                        </tr>
-                        <tr>
-                            <td class="trx-id" data-label="Transection ID">#V981XCKD03N4</td>
-                            <td class="username" data-label="User Name">munnaahmed</td>
-                            <td class="date" data-label="Date">12 Mar, 21 at 12:30 AM</td>
-                            <td class="amount" data-label="Amount">$250.50</td>
+                            <td data-label="Ticket ID/Subject">[Ticket#634034] asdf</td>
+                            <td data-label="Status"><span class="badge border border-success text--success badge--cap fw-bold">Open</span></td>
+                            <td data-label="Priority"><span class="badge border border-danger text--danger badge--cap fw-bold">High</span></td>
+                            <td data-label="Last Reply">4 Hours Ago</td>
+                            <td data-label="Action">
+                                <div>
+                                    <button data-bs-toggle="modal" data-bs-target="#0" class="badge badge--success"><i class="las la-edit"></i></button>
+                                    <button data-bs-toggle="modal" data-bs-target="#delModal" class="badge badge--danger"><i class="las la-trash"></i></button>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </section>
-    <!-- Transection Section Ends Here -->
-    
+    </div>
+    <!-- My Ticket Section Ends Here -->
+
+    <div class="modal fade custom--modal show" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-modal="true">
+        <div class="modal-dialog">
+            <div class="modal-content section--bg">
+                <form >
+                    <div class="modal-header modal--header">
+                        <h5 class="modal-title"> Confirmation!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to close this support ticket?</p>
+                    </div>
+                    <div class="modal-footer modal--footer">
+                        <button type="button" class="btn btn--danger btn--md" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
+                        <button type="submit" class="btn btn--base btn--custom btn--md"><i class="fa fa-check"></i> Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer Section Starts Here -->
 <footer class="footer-section bg_img" style="background: url(assets/images/footer/bg.jpg) center;">
     <div class="footer-top">

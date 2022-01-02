@@ -1,5 +1,5 @@
 .banner-section {
-    padding: 200px 0 100px;
+    padding: 160px 0 80px;
     position: relative;
     @include breakpoint(max-xxl) {
         padding: 150px 0px 50px;
@@ -90,6 +90,9 @@
 }
 .banner-thumb {
     max-width: 400px;
+    @include breakpoint(max-xxl) {
+        max-height: 600px;
+    }
     @include breakpoint(max-xl) {
         max-width: 300px;
     }
@@ -108,17 +111,17 @@
 
 // Inner Banner
 .inner-banner {
-    padding: 150px 0 110px;
+    padding: 170px 0 110px;
     position: relative;
     @include breakpoint(max-xl) {
-        padding-top: 140px;
+        padding-top: 160px;
     }
     @include breakpoint(max-lg) {
-        padding-top: 120px;
+        padding-top: 140px;
         padding-bottom: 80px;
     }
     @include breakpoint(max-sm) {
-        padding-top: 80px;
+        padding-top: 120px;
         padding-bottom: 70px;
     }
     &::before {

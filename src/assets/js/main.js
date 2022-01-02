@@ -28,7 +28,7 @@ $('.menu li a').on('click', function () {
 // Responsive Menu
 var headerTrigger = $('.header-trigger');
 headerTrigger.on('click', function(){
-    $('.menu, .header-trigger').toggleClass('active')
+    $('.menu').toggleClass('active')
     $('.overlay').toggleClass('active')
 });
 
@@ -46,15 +46,14 @@ over.on('click', function() {
   $('.overlay').removeClass('active')
   $('.menu, .header-trigger').removeClass('active')
   $('.header-top').removeClass('active')
-  $('.dashboard__sidebar').removeClass('active')
 })
 
 
-// // Sticky Menu
-// window.addEventListener('scroll', function(){
-//   var header = document.querySelector('.header-bottom');
-//   header.classList.toggle('sticky', window.scrollY > 0);
-// });
+// Sticky Menu
+window.addEventListener('scroll', function(){
+  var header = document.querySelector('.header');
+  header.classList.toggle('sticky', window.scrollY > 0);
+});
 
 
 // Scroll To Top 
@@ -230,9 +229,14 @@ $('.user-thumb').on('click', function() {
   $('.overlay').addClass('active')
 })
 
+$('.single-select').on('click', function() {
+  $('.single-select').removeClass('active')
+  $(this).addClass('active')
+})
+
 $('.btn-close, .overlay').on('click', function() {
-  $('.dashboard__sidebar').removeClass('active')
   $('.overlay').removeClass('active')
+  $('.menu').removeClass('active')
 })
 
 $('.video-button').magnificPopup({

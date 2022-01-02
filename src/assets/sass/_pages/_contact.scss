@@ -1,19 +1,23 @@
-.contact-form {
+
+.contact-wrapper {
     padding: 60px 40px;
-    // padding-left: 250px;
-    background: $section-bg;
-    border-radius: 15px;
-    border: 1px solid $border-color;
-    @include breakpoint(max-xxl) {
-        
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(max-md) {
+        padding: 0;
+    }
+    &::before {
+        @include before-set;
+        left: 300px;
+        background: $section-bg;
+        @include breakpoint(max-md) {
+            display: none;
+        }
     }
 }
-.contact-info {
-    padding: 60px 40px;
-    background: $section-bg;
-    max-width: 400px;
-    border: 1px solid $border-color;
-    border-radius: 10px;
+.contact-form {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-wrapper {
@@ -25,12 +29,37 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
-.contact-thumb {
-    // height: 100%;
-    img {
-        // object-fit: cover;
-        // width: 100%;
-        // height: 100%;
+.contact-info-wrapper {
+    padding: 60px 40px;
+    border: 1px solid rgba($base-color,.3);
+    background: $body-bg;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(max-xl) {
+        @include breakpoint(lg) {
+            padding: 40px 25px;
+        }
+        @include breakpoint(max-sm) {
+            padding: 40px 25px;
+        }
+        @include breakpoint(max-xs) {
+            padding: 30px 15px;
+        }
+    }
+}
+.contact-info-list {
+    font-size: 17px;
+    @include breakpoint(max-sm) {
+        font-size: 16px;
+    }
+    li {
+        display: flex;
+        padding: 10px 0;
+        i {
+            color: $base-color;
+            font-size: 24px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
     }
 }

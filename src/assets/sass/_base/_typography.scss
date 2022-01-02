@@ -108,15 +108,21 @@ ul {
         box-shadow: none;
     }
 }
+.form--control[type=file] {
+    line-height: 25px;
+    padding: 12px 25px;
+}
 .form--control[readonly] {
-    background: rgba($primary-color, .05);
+    background: rgba($primary-color, .05)  !important;
     &:focus {
         border-color: $border-color;
     }
 }
+.form--control.style-two {
+    background: $section-bg;
+}
 ::-webkit-input-placeholder {
-    color: $body-color;
-    // line-height: 1;
+    color: $body-color !important;
 }
 .h-40 {
     height: 40px !important;
@@ -253,24 +259,10 @@ textarea.form--control {
         visibility: hidden;
         opacity: 0;
     }
-    // input[type="checkbox"]::before {
-    //     content: "";
-    //     width: 7px;
-    //     height: 7px;
-    //     color: $white;
-    //     visibility: hidden;
-    //     opacity: 0;
-    //     background: $white;
-    //     border-radius: 50%;
-    // }
     input[type="radio"]:checked::after {
         visibility: visible;
         opacity: 1;
     }
-    // input[type="checkbox"]:checked::before {
-    //     visibility: visible;
-    //     opacity: 1;
-    // }
 }
 
 .scrollToTop {
